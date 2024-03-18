@@ -246,6 +246,7 @@ html {
   right: 2vh;
   top: 2vh;
   font-size: 5vh;
+  color: #000;
   cursor: pointer;
 }
 
@@ -745,6 +746,7 @@ html {
     font-size: 1.2rem;
   }
   #popup .popup_screen .box_txt .txt_title form input {
+    border-radius: 0;
     border-bottom: 1px solid #000;
     padding-bottom: .3rem;
     font-family: 'preM';
