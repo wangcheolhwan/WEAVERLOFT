@@ -183,7 +183,7 @@ html {
 
 /* header 반응형 */
 @media (max-width: 1500px) {
-  #header h1 {
+  #header .logo {
     flex: 1;
   }
 
@@ -193,6 +193,17 @@ html {
 }
 
 @media (max-width: 767px) {
+  #header {
+    padding: 1rem 2rem;
+  }
+  #header .logo img {
+    width: 3vh;
+    aspect-ratio: 47 / 35;
+  }
+  #header .btn_menu {
+    width: 2rem;
+  }
+
   #header form {
     display: none;
   }
@@ -221,7 +232,7 @@ html {
   top: 2vh;
 }
 #snb .logo img {
-  width: 2vw;
+  width: 5vh;
   aspect-ratio: 47 / 35;
 }
 
@@ -239,6 +250,7 @@ html {
 }
 
 #snb .list_menu {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -287,15 +299,34 @@ html {
   bottom: 0;
 }
 #snb .box_img img {
-  width: 60vw;
+  width: 120vh;
   object-fit: cover;
   aspect-ratio: 16 / 9;
 }
 
 /* snb 반응형 */
 @media (max-width: 1500px) {
-  #snb .box_img {
+  #snb {
+    padding: 3rem;
+  }
+
+  #snb .box_img img {
     display: none;
+  }
+  #snb .txt_title {
+    width: 280px;
+    font-size: 7vh;
+    word-break: break-all;
+  }
+  #snb .list_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12vh 0;
+    margin-left: 12vh;
+  }
+  #snb .list_menu li {
+    font-family: 'preB';
   }
 }
 
@@ -303,7 +334,10 @@ html {
   #snb.active {
     display: block;
   }
-
+  #snb .txt_title {
+    display: none;
+  }
+  
   #snb form {
     position: relative;
     display: flex;
@@ -335,7 +369,7 @@ html {
     opacity: 0;
     background: #FFF;
     border-radius: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     box-shadow: 2px 2px 5px #000000;
     transition: .5s;
   }
@@ -349,7 +383,7 @@ html {
 
   #snb .box_button h3 {
     margin-bottom: 2rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: 'preB';
   }
 
@@ -374,16 +408,26 @@ html {
   }
 
   #snb .list_menu {
-    margin-top: 50px;
+    margin: 0;
+    margin-top: 3rem;
+    padding: 0;
     gap: 20px;
   }
 
   #snb .list_menu li {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   #snb .list_menu li:not(:last-child) {
-    padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
+  }
+  #snb .list_menu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+  }
+  #snb .list_menu li i {
+    display: none;
   }
 }
 
@@ -398,12 +442,12 @@ html {
 
   #main_visual .swiper-button-prev {
     left: -600px;
-    color: #FFF;
+    color: #000;
   }
 
   #main_visual .swiper-button-next {
     right: -600px;
-    color: #FFF;
+    color: #000;
   }
 
   #main_visual .box_nav {
@@ -457,7 +501,6 @@ html {
   #main_visual .swiper-slide .txt_title p {
     font-family: 'samlipB';
     font-size: 3rem;
-    line-height: 3.4rem;
     white-space: nowrap;
   }
 
@@ -502,6 +545,9 @@ html {
       padding: .5rem;
       font-size: 1rem;
     }
+    #main_visual .swiper-slide .txt_title p {
+      white-space: normal;
+    }
   }
   @media (max-width: 767px) {
     .swiper-button-next:after, .swiper-button-prev:after {
@@ -522,22 +568,23 @@ html {
 
   /* project_area */
   #project_area {
-    padding: 7rem 0;
+    padding: 4rem 0;
   }
 
   #project_area h2 {
     text-align: center;
     font-size: 3rem;
     font-family: 'preB';
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   #project_area .box_tab {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 4rem;
-    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-family: 'preSB';
   }
 
   #project_area .box_tab .cont_tab {
@@ -555,7 +602,7 @@ html {
   #project_area .box_content {
     display: none;
     gap: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   #project_area .box_content.active {
@@ -636,7 +683,7 @@ html {
   #popup {
     z-index: 101;
     position: fixed;
-    right: 0vw;
+    right: 0;
     top: 52%;
   }
 
@@ -692,7 +739,7 @@ html {
   @media (max-width: 1199px) {
     #popup {
       top: auto;
-      bottom: 10rem;
+      bottom: 11rem;
     }
   }
   @media (max-width: 767px) {
