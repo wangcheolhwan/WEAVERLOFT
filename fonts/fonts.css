@@ -1,66 +1,66 @@
 @font-face {
 	font-family: 'PreTit';
 	font-weight: 900;
-	font-display: swap;
+	font-display: block;
 	src: local('Pretendard Black'), url(./woff2/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Black.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'PreEB';
 	font-weight: 800;
-	font-display: swap;
+	font-display: block;
 	src: local('Pretendard ExtraBold'), url(./woff2/Pretendard-ExtraBold.woff2) format('woff2'), url(./woff/Pretendard-ExtraBold.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'PreB';
 	font-weight: 700;
-	font-display: swap;
+	font-display: block;
 	src: local('Pretendard Bold'), url(./woff2/Pretendard-Bold.woff2) format('woff2'), url(./woff/Pretendard-Bold.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'PreSB';
 	font-weight: 600;
-	font-display: swap;
+	font-display: block;
 	src: local('Pretendard SemiBold'), url(./woff2/Pretendard-SemiBold.woff2) format('woff2'), url(./woff/Pretendard-SemiBold.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'PreM';
 	font-weight: 500;
-	font-display: swap;
+	font-display: block;
 	src: local('Pretendard Medium'), url(./woff2/Pretendard-Medium.woff2) format('woff2'), url(./woff/Pretendard-Medium.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'PreR';
 	font-weight: 400;
-	font-display: swap;
+	font-display: block;
 	src: local('Pretendard Regular'), url(./woff2/Pretendard-Regular.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'samlipB';
 	font-weight: 700;
-	font-display: swap;
+	font-display: block;
 	src: url(./SDSamliphopangcheTTFBasic.ttf) format('truetype')
 }
 @font-face {
 	font-family: 'samlip';
 	font-weight: 400;
-	font-display: swap;
+	font-display: block;
 	src: url(./SDSamliphopangcheTTFBasic.ttf) format('truetype')
 }
 @font-face {
 	font-family: 'samlipOutB';
 	font-weight: 700;
-	font-display: swap;
+	font-display: block;
 	src: url(./SDSamliphopangcheTTFOutline.ttf) format('truetype')
 }
 @font-face {
 	font-family: 'samlipOut';
 	font-weight: 400;
-	font-display: swap;
+	font-display: block;
 	src: url(./SDSamliphopangcheTTFOutline.ttf) format('truetype')
 }
