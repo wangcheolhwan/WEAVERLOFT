@@ -89,7 +89,7 @@ html {
   width: 70%;
   padding-left: 8rem;
   font-size: 1.2rem;
-  font-family: 'preSB';
+  font-family: 'preEB';
   color: #333;
 }
 
@@ -183,6 +183,10 @@ html {
 
 /* header 반응형 */
 @media (max-width: 1500px) {
+  #header {
+    padding: .8rem 2rem;
+  }
+
   #header .logo {
     flex: 1;
   }
@@ -194,14 +198,15 @@ html {
 
 @media (max-width: 767px) {
   #header {
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
   }
   #header .logo img {
     width: 3vh;
     aspect-ratio: 47 / 35;
   }
   #header .btn_menu {
-    width: 2rem;
+    width: 1.5rem;
+    --tab-menu-h: 16px
   }
 
   #header form {
@@ -306,31 +311,31 @@ html {
 
 /* snb 반응형 */
 @media (max-width: 1500px) {
-  #snb {
-    padding: 3rem;
-  }
+  
 
   #snb .box_img img {
     display: none;
   }
   #snb .txt_title {
-    width: 280px;
-    font-size: 7vh;
-    word-break: break-all;
+    font-size: 8vh;
   }
   #snb .list_menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 12vh 0;
-    margin-left: 12vh;
+    padding: 17vh 0;
+    margin-left: 10vh;
   }
   #snb .list_menu li {
+    font-size: 6vh;
     font-family: 'preB';
   }
 }
 
 @media (max-width: 767px) {
+  #snb {
+    padding: 2rem;
+  }
   #snb.active {
     display: block;
   }
@@ -344,7 +349,7 @@ html {
     width: 100%;
     background: #eeeeee;
     border-radius: 50px;
-    margin-top: 8rem;
+    margin-top: 10vh;
   }
 
   #snb form input {
@@ -369,7 +374,6 @@ html {
     opacity: 0;
     background: #FFF;
     border-radius: 10px;
-    font-size: 1.2rem;
     box-shadow: 2px 2px 5px #000000;
     transition: .5s;
   }
@@ -377,13 +381,13 @@ html {
   #snb .box_button.active {
     height: auto;
     opacity: 1;
-    margin-top: 30px;
-    padding: 2rem 1.5rem;
+    margin-top: 3vh;
+    padding: 1.5rem 1rem;
   }
 
   #snb .box_button h3 {
-    margin-bottom: 2rem;
-    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
     font-family: 'preB';
   }
 
@@ -409,13 +413,13 @@ html {
 
   #snb .list_menu {
     margin: 0;
-    margin-top: 3rem;
+    margin-top: 3vh;
     padding: 0;
-    gap: 20px;
+    gap: 2vh;
   }
 
   #snb .list_menu li {
-    font-size: 2rem;
+    font-size: 3vh;
   }
   #snb .list_menu li:not(:last-child) {
     border-bottom: 1px solid #ccc;
@@ -424,7 +428,7 @@ html {
     display: block;
     width: 100%;
     height: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 2vh;
   }
   #snb .list_menu li i {
     display: none;
@@ -583,7 +587,7 @@ html {
     gap: 1rem;
     justify-content: center;
     margin-bottom: 2rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'preSB';
   }
 
@@ -619,11 +623,12 @@ html {
     object-fit: cover;
     aspect-ratio: 1 / 1;
     margin-bottom: 1rem;
+    border-radius: 10px;
   }
 
   #project_area .box_content li h3 {
     font-family: 'preB';
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: .5rem;
   }
 
@@ -718,17 +723,39 @@ html {
     height: 20rem;
   }
 
-  #popup .popup_screen .box_txt p {
+  #popup .popup_screen .box_txt .txt_title {
     display: flex;
+    gap: 3rem;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
     flex: 3;
     background: #FFF;
-    font-size: 2rem;
     font-family: 'preSB';
   }
+  #popup .popup_screen .box_txt .txt_title p {
+    font-size: 1.5rem;
 
-  #popup .popup_screen .box_txt button {
+  }
+  #popup .popup_screen .box_txt .txt_title form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  #popup .popup_screen .box_txt .txt_title form input {
+    border-bottom: 1px solid #000;
+    padding-bottom: .3rem;
+    font-family: 'preM';
+    font-size: 1rem;
+  }
+  #popup .popup_screen .box_txt .txt_title form i {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  #popup .popup_screen .box_txt .btn_close {
     flex: 1;
     background: #0f4be2;
     color: #FFF;
@@ -746,6 +773,15 @@ html {
     #popup img {
       width: 80px;
       height: 80px;
+    }
+    #popup .popup_screen .box_txt {
+      width: 80%;
+    }
+    #popup .popup_screen .box_txt .txt_title {
+      padding: 1rem;
+    }
+    #popup .popup_screen .box_txt .txt_title form {
+      flex-wrap: wrap;
     }
   }
 
