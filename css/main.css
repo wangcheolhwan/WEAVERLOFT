@@ -88,7 +88,7 @@ html {
   justify-content: center;
   width: 70%;
   padding-left: 8rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'preSB';
   color: #333;
 }
@@ -108,7 +108,6 @@ html {
 
 #header form input {
   padding: 14px 0 14px 1.5rem;
-  font-size: 1.2rem;
   font-family: 'preB';
 }
 
@@ -123,11 +122,11 @@ html {
   position: absolute;
   right: 0;
   top: 50px;
-  width: 140%;
+  width: 150%;
   padding: 2rem 1.5rem;
   background: #FFF;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   box-shadow: 2px -2px 5px #0000001a;
   opacity: 0;
   visibility: hidden;
@@ -141,7 +140,7 @@ html {
 
 #header form .box_button h3 {
   margin-bottom: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: 'preB';
 }
 
@@ -208,7 +207,6 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 3rem;
   background: #FFF;
 }
 
@@ -219,15 +217,19 @@ html {
 
 #snb .logo {
   position: absolute;
-  left: 2rem;
-  top: 2rem;
+  left: 2vh;
+  top: 2vh;
+}
+#snb .logo img {
+  width: 2vw;
+  aspect-ratio: 47 / 35;
 }
 
 #snb .btn_close {
   position: absolute;
-  right: 2rem;
-  top: 2rem;
-  font-size: 3rem;
+  right: 2vh;
+  top: 2vh;
+  font-size: 5vh;
   cursor: pointer;
 }
 
@@ -240,13 +242,12 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 14rem 0;
-  gap: 100px;
-  margin-left: 20rem;
+  padding: 18vh 0;
+  margin-left: 24vh;
 }
 
 #snb .list_menu li {
-  font-size: 4rem;
+  font-size: 6vh;
   font-family: 'samlipOut';
   color: #777;
   opacity: 0;
@@ -272,16 +273,23 @@ html {
 }
 
 #snb .txt_title {
+  z-index: 1;
   position: absolute;
-  right: 200px;
-  top: 250px;
+  right: 10vw;
+  top: 16.3vh;
   font-family: 'preTit';
-  font-size: 8rem;
+  font-size: 10vh;
 }
 #snb .box_img {
+  z-index: -1;
   position: absolute;
   right: 0;
   bottom: 0;
+}
+#snb .box_img img {
+  width: 60vw;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
 /* snb 반응형 */
@@ -405,7 +413,7 @@ html {
     gap: 1rem;
     position: absolute;
     left: 50%;
-    bottom: 2rem;
+    bottom: 1rem;
     transform: translateX(-50%);
     color: #FFF;
   }
@@ -414,10 +422,10 @@ html {
   #main_visual .swiper-button-play {
     display: none;
     cursor: pointer;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.5);
+    padding: .5rem;
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   #main_visual .swiper-button-pause.show,
@@ -427,10 +435,10 @@ html {
 
   #main_visual .swiper-pagination {
     position: static;
-    padding: 1rem 2rem;
-    background: rgba(0, 0, 0, 0.5);
+    padding: .5rem 1rem;
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 40px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   #main_visual .swiper-slide .txt_title {
     position: absolute;
@@ -441,20 +449,30 @@ html {
   }
 
   #main_visual .swiper-slide .txt_title h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-family: 'samlipOutB';
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   #main_visual .swiper-slide .txt_title p {
     font-family: 'samlipB';
     font-size: 3rem;
+    line-height: 3.4rem;
+    white-space: nowrap;
   }
 
+  #main_visual .swiper-slide {
+    display: flex;
+    justify-content: center;
+    background: #f0efef;
+
+  }
   #main_visual .swiper-slide img {
     object-fit: cover;
     width: 100%;
-    height: 800px;
+    max-width: 1900px;
+    height: 600px;
+    aspect-ratio: 16 / 9;
   }
   /* main_visual 반응형 */
   @media (max-width: 1300px) {
@@ -504,12 +522,12 @@ html {
 
   /* project_area */
   #project_area {
-    padding: 8rem 0;
+    padding: 7rem 0;
   }
 
   #project_area h2 {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: 'preB';
     margin-bottom: 4rem;
   }
@@ -618,11 +636,13 @@ html {
   #popup {
     z-index: 101;
     position: fixed;
-    right: 1rem;
+    right: 0vw;
     top: 52%;
   }
 
   #popup img {
+    width: 100px;
+    height: 100px;
     cursor: pointer;
   }
 
