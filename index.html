@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weaverloft coding test</title>
+
+  <!-- reset -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+  <!-- XEICON -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+  <header id="header">
+    <h1 class="logo">
+      <a href="index.html">
+        <img src="./images/logo_black.svg" alt="메인로고">
+      </a>
+    </h1>
+    <ul class="list_menu">
+      <li><a href="#sub_page1">회사소개</a></li>
+      <li><a href="#sub_page2">주요사업</a></li>
+      <li><a href="#sub_page3">매거진</a></li>
+      <li><a href="#sub_page4">공지사항</a></li>
+      <li><a href="#sub_page5">채용공고</a></li>
+    </ul>
+    <form name="search" action="index.html" method="get">
+      <input class="search" type="text" placeholder="키워드를 입력하세요.">
+      <div class="box_button">
+        <h3>추천 검색어</h3>
+        <ul>
+          <li><a href="#design">#디자인</a></li>
+          <li><a href="#plan">#기획</a></li>
+          <li><a href="#publisher">#퍼블리셔</a></li>
+          <li><a href="#test">#코딩테스트</a></li>
+          <li><a href="#developer">#백엔드개발자</a></li>
+        </ul>
+      </div>
+      <button type="submit">
+        <i class="xi-search"></i>
+      </button>
+    </form>
+    <button class="btn_menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <section id="snb">
+    <h2 class="info">사이드 메뉴바</h2>
+    <a class="logo" href="index.html">
+      <img src="./images/logo_black.svg" alt="메인로고">
+    </a>
+    <button class="btn_close">
+      <i class="xi-close"></i>
+    </button>
+    <form name="search" action="index.html" method="get">
+      <input class="search" type="text" placeholder="키워드를 입력하세요.">
+      <button type="submit">
+        <i class="xi-search"></i>
+      </button>
+    </form>
+    <div class="box_button">
+      <h3>추천 검색어</h3>
+      <ul>
+        <li><a href="#design">#디자인</a></li>
+        <li><a href="#plan">#기획</a></li>
+        <li><a href="#publisher">#퍼블리셔</a></li>
+        <li><a href="#test">#코딩테스트</a></li>
+        <li><a href="#developer">#백엔드개발자</a></li>
+      </ul>
+    </div>
+    <ul class="list_menu">
+      <li>
+        <a href="#sub_page1">
+          회사소개
+          <i class="xi-long-arrow-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#sub_page2">
+          주요사업
+          <i class="xi-long-arrow-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#sub_page3">
+          매거진
+          <i class="xi-long-arrow-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#sub_page4">
+          공지사항
+          <i class="xi-long-arrow-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#sub_page5">
+          채용공고
+          <i class="xi-long-arrow-right"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="txt_title">WEAVERLOFT</div>
+    <div class="box_img">
+      <img src="./images/menu_img_01.png" alt="배경 이미지">
+    </div>
+  </section>
+  <section id="main_visual">
+    <h2 class="info">메인이미지 슬라이드</h2>
+    <div class="swiper">
+      <div class="box_nav">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-play">
+          <i class="xi-play"></i>
+        </div>
+        <div class="swiper-button-pause show">
+          <i class="xi-pause"></i>
+        </div>
+      </div>
+      <div class="box_control">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="txt_title">
+            <h2>WEAVERLOFT</h2>
+            <p>WEAVERLOFT에 오신 것을 환영합니다!</p>
+          </div>
+          <img src="./images/main_01.png" alt="메인이미지">
+        </div>
+        <div class="swiper-slide">
+          <div class="txt_title">
+            <h2>Solve</h2>
+            <p>고객과의 협업으로 커스텀 웹 솔루션을 제공합니다.</p>
+          </div>
+          <img src="./images/main_07.png" alt="메인이미지">
+        </div>
+        <div class="swiper-slide">
+          <div class="txt_title">
+            <h2>Achieve</h2>
+            <p>웹 디자인, 개발, 마케팅 전문가들과 함께 성공을 이끌어 나가세요.</p>
+          </div>
+          <img src="./images/main_03.png" alt="메인이미지">
+        </div>
+        <div class="swiper-slide">
+          <div class="txt_title">
+            <h2>Creative</h2>
+            <p>창의적인 아이디어로 여러분의 비전을 현실로 만들어 드립니다.</p>
+          </div>
+          <img src="./images/main_04.png" alt="메인이미지">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="project_area">
+    <h2 class="info">프로젝트</h2>
+    <div class="wrap">
+      <h2>PROJECT</h2>
+      <ul class="box_tab">
+        <li class="cont_tab active" data-tab="01">#ALL</li>
+        <li class="cont_tab" data-tab="02">#UI/UX</li>
+        <li class="cont_tab" data-tab="03">#DESIGN</li>
+        <li class="cont_tab" data-tab="04">#DEVELOPMENT</li>
+      </ul>
+      <ul class="box_content active" data-tab="01">
+        <li>
+          <img src="./images/project_01.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li>
+          <img src="./images/project_01.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li>
+          <img src="./images/project_01.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li>
+          <img src="./images/project_01.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+      </ul>
+      <ul class="box_content" data-tab="02">
+        <li data-type="ui/ux">
+          <img src="./images/project_02.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="ui/ux">
+          <img src="./images/project_02.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="ui/ux">
+          <img src="./images/project_02.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="ui/ux">
+          <img src="./images/project_02.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+      </ul>
+      <ul class="box_content" data-tab="03">
+        <li data-type="design">
+          <img src="./images/project_03.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="design">
+          <img src="./images/project_03.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="design">
+          <img src="./images/project_03.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="design">
+          <img src="./images/project_03.png" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+      </ul>
+      <ul class="box_content" data-tab="04">
+        <li data-type="development">
+          <img src="./images/project_04.jpg" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="development">
+          <img src="./images/project_04.jpg" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="development">
+          <img src="./images/project_04.jpg" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+        <li data-type="development">
+          <img src="./images/project_04.jpg" alt="프로젝트 이미지">
+          <h3>메인타이틀</h3>
+          <p>서브타이틀</p>
+        </li>
+      </ul>
+      <div class="btn_more">
+        <a href="#project">
+          VIEW MORE
+          <i class="xi-long-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="popup">
+    <h2 class="info">팝업</h2>
+    <img class="floating_btn" src="./images/floating_btn.png" alt="팝업버튼">
+    <div class="popup_screen">
+      <div class="box_txt">
+        <p>팝업 타이틀</p>
+        <button class="btn_close">닫기</button>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <h2 class="info">웹사이트 정보</h2>
+    <div class="wrap">
+      <img src="./images/footer-logo.png" alt="위버로프트 로고">
+      <address>Copyright © All Rights Reserved.</address>
+      <div class="box_icon">
+        <a href="#facebook">
+          <img src="./images/facebook_icon.png" alt="페이스북 아이콘">
+        </a>
+        <a href="#youtube">
+          <img src="./images/youtube_icon.png" alt="유튜브 아이콘">
+        </a>
+        <a href="#instagram">
+          <img src="./images/insta_icon.png" alt="인스타그램 아이콘">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* global */
+    function clearClass(arr) {
+        arr.forEach((el) => el.classList.remove('active'));
+      }
+  
+    function scrollFix() {
+        document.body.style.cssText = `
+      position: fixed; 
+      top: -${window.scrollY}px;
+      overflow-y: scroll;
+      width: 100%;`;
+      }
+    function scrollFixClear() {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = '';
+      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+    }
+  
+    /* 추천 검색어 */
+    (function () {
+      const searchEl = document.querySelector('#header .search');
+      const buttonBoxEl = document.querySelector('#header .box_button');
+      searchEl.addEventListener('focus', function () {
+        buttonBoxEl.classList.add('active');
+      })
+      searchEl.addEventListener('blur', function () {
+        setTimeout(function () {
+          buttonBoxEl.classList.remove('active');
+        }, 150)
+      })
+    })();
+  
+    /* 모바일 추천 검색어 */
+    (function () {
+      const searchEl = document.querySelector('#snb .search');
+      const buttonBoxEl = document.querySelector('#snb .box_button');
+      searchEl.addEventListener('focus', function () {
+        buttonBoxEl.classList.add('active');
+      })
+      searchEl.addEventListener('blur', function () {
+        setTimeout(function () {
+          buttonBoxEl.classList.remove('active');
+        }, 150)
+      })
+    })();
+  
+    /* 메인비주얼 슬라이드 */
+    (function () {
+      // 스와이퍼 설정
+      var mySwiper = new Swiper('#main_visual .swiper', {
+        autoplay: {
+          delay: 3000
+        },
+        loop: true,
+        slidesPerView: 1,
+        pagination: {
+          el: '#main_visual .swiper-pagination',
+          type: "fraction",
+          renderFraction: function (currentClass, totalClass) {
+            return /* html */ `
+            <span class="${currentClass}"></span> 
+            <span class="swiper-pagination-separator">|</span>
+            <span class="${totalClass}"></span>
+            `;
+          }
+        },
+        navigation: {
+          prevEl: '#main_visual .swiper-button-prev',
+          nextEl: '#main_visual .swiper-button-next'
+        },
+      });
+  
+      // 슬라이드 시작 버튼, 멈춤 버튼
+      const playBtnEl = document.querySelector('#main_visual .swiper-button-play');
+      const stopBtnEl = document.querySelector('#main_visual .swiper-button-pause');
+  
+      playBtnEl.addEventListener('click', function () {
+        mySwiper.autoplay.start();
+        playBtnEl.classList.remove('show');
+        stopBtnEl.classList.add('show');
+      });
+  
+      stopBtnEl.addEventListener('click', function () {
+        mySwiper.autoplay.stop();
+        stopBtnEl.classList.remove('show');
+        playBtnEl.classList.add('show');
+      });
+    })();
+  
+    /* 컨텐츠 탭 */
+    (function () {
+      const contentTabEls = document.querySelectorAll('.cont_tab');
+      const tabEls = [...contentTabEls];
+      
+      tabEls.forEach((tabEl) => {
+        tabEl.addEventListener('click', (event) => {
+          clearClass(tabEls);
+          event.currentTarget.classList.add('active');
+  
+          const tabNum = event.currentTarget.dataset.tab;
+          const boxContentEls = document.querySelectorAll('.box_content');
+  
+          boxContentEls.forEach((contentEl) => {
+            if (contentEl.dataset.tab === tabNum) {
+              contentEl.classList.add('active');
+            } else {
+              contentEl.classList.remove('active');
+            }
+          })
+        })
+      })
+    })();
+  
+    /* 컨텐츠 팝업 */
+    (function () {
+      const openBtn = document.querySelector('#popup .floating_btn');
+      const closeBtn = document.querySelector('#popup .btn_close');
+      const popupEl = document.querySelector('#popup .popup_screen');
+  
+      openBtn.addEventListener('click', function () {
+        popupEl.classList.add('active');
+        scrollFix();
+      })
+      closeBtn.addEventListener('click', function () {
+        popupEl.classList.remove('active');
+        scrollFixClear();
+      })
+    })();
+  
+    /* snb 팝업 */
+    (function () {
+      const openBtn = document.querySelector('#header .btn_menu');
+      const closeBtn = document.querySelector('#snb .btn_close');
+      const popupEl = document.querySelector('#snb');
+      const menuEls = document.querySelectorAll('#snb .list_menu > li');
+  
+      openBtn.addEventListener('click', function () {
+        popupEl.classList.add('active');
+        scrollFix();
+  
+        let delay = 0;
+  
+        menuEls.forEach(menuEl => {
+          menuEl.style.transition = `opacity ${delay}s`;
+          menuEl.style.opacity = '1';
+          delay += .5;
+        })
+      })
+      closeBtn.addEventListener('click', function () {
+        popupEl.classList.remove('active');
+        scrollFixClear();
+  
+        menuEls.forEach(menuEl => {
+          menuEl.style.opacity = '0';
+        })
+      })
+    })();
+  
+    /* view more 링크 */
+    (function () {
+      const contentEls = document.querySelectorAll('#project_area .box_content > li');
+      const btnMoreEl = document.querySelector('#project_area .btn_more');
+  
+      [...contentEls].forEach((contentEl) => {
+        contentEl.addEventListener('click', (event) => {
+          const dataType = contentEl.dataset.type;
+          const newUrl = window.location.href.split('#')[0] + `#${dataType}`;
+          window.history.pushState(null, null, newUrl);
+        })
+      })
+    })();
+  </script>
+</body>
+</html>
