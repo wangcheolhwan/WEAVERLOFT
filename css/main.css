@@ -88,14 +88,21 @@ html {
   justify-content: center;
   width: 70%;
   padding-left: 8rem;
-  font-size: 1.2rem;
-  font-family: 'preEB';
+  font-size: 1.6rem;
+  font-family: 'samlipOutB';
   color: #333;
 }
 
 #header .list_menu li {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
   margin: 0 2rem;
   list-style: none;
+}
+#header .list_menu li a:hover {
+  font-family: 'samlipB';
+  font-size: 1.7rem;
 }
 
 #header form {
@@ -154,6 +161,10 @@ html {
   border: 1px solid #777;
   border-radius: 50px;
 }
+#header form .box_button ul li:hover {
+  background: #000;
+  color: #FFF;
+}
 
 #header form .box_button ul li:not(:last-child) {
   margin-right: 1rem;
@@ -197,9 +208,6 @@ html {
 }
 
 @media (max-width: 767px) {
-  #header {
-    padding: .5rem 2rem;
-  }
   #header .logo img {
     width: 3vh;
     aspect-ratio: 47 / 35;
@@ -272,22 +280,6 @@ html {
 }
 #snb .list_menu li:hover {
   color: #000;
-}
-#snb .list_menu li a {
-  position: relative;
-  background: #FFF;
-}
-#snb .list_menu li i {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 40%;
-  transform: translateY(-50%);
-  vertical-align: middle;
-}
-#snb .list_menu li:hover i {
-  left: 105%;
-  transition: .5s;
 }
 
 #snb .txt_title {
@@ -402,6 +394,10 @@ html {
     border: 1px solid #777;
     border-radius: 50px;
   }
+  #snb .box_button ul li:hover {
+    background: #000;
+    color: #FFF;
+  }
 
   #snb .box_button ul li:not(:last-child) {
     margin-right: 1rem;
@@ -453,6 +449,10 @@ html {
   #main_visual .swiper-button-next {
     right: -600px;
     color: #000;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 4rem;
   }
 
   #main_visual .box_nav {
@@ -509,11 +509,9 @@ html {
     white-space: nowrap;
   }
 
-  #main_visual .swiper-slide {
-    display: flex;
-    justify-content: center;
+  #main_visual .swiper-slide .box_img {
+    text-align: center;
     background: #f0efef;
-
   }
   #main_visual .swiper-slide img {
     object-fit: cover;
@@ -542,6 +540,11 @@ html {
       font-size: 2rem;
     }
 
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      font-size: 3rem;
+    }
+
     #main_visual .swiper-pagination {
       padding: .5rem 1rem;
       font-size: 1rem;
@@ -556,7 +559,7 @@ html {
   }
   @media (max-width: 767px) {
     .swiper-button-next:after, .swiper-button-prev:after {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
     
     #main_visual .swiper-slide img {
@@ -593,15 +596,57 @@ html {
   }
 
   #project_area .box_tab .cont_tab {
-    padding: 1rem 2rem;
-    border: 1px solid #000;
-    border-radius: 50px;
+    display: flex;
+    perspective: 100px;
+    perspective-origin: 250% 250%;
     cursor: pointer;
+    transition: .1s;
+  }
+  #project_area .box_tab .cont_tab.active {
+    perspective-origin: center;
+    background: #000;
+    color: #FFF;
+  }
+
+  #project_area .box_tab .cont_tab:hover {
+    perspective-origin: center;
+  }
+  #project_area .box_tab .cont_tab .top {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    transform-style: preserve-3d;
+    transform: translateZ(2px);
+    transition: .1s;
+  }
+  #project_area .box_tab .cont_tab.active .top,
+  #project_area .box_tab .cont_tab .top:hover {
+    transform: translateZ(0);
+  }
+  
+  #project_area .box_tab .cont_tab .top::before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 2px;
+    height: 106.5%;
+    background: #000;
+    transform: translateX(-0.3px) translateY(-0.9px) translateZ(-1px) rotateY(90deg);
+  }
+  #project_area .box_tab .cont_tab .top::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 101%;
+    height: 2px;
+    background: #000;
+    transform: translateX(-1px) translateY(0px) translateZ(-1px) rotateX(90deg);
   }
 
   #project_area .box_tab .cont_tab.active {
-    background: #000;
-    color: #FFF;
+    
   }
 
   #project_area .box_content {
@@ -618,13 +663,23 @@ html {
     flex: 1;
     cursor: pointer;
   }
-
+  #project_area .box_content li:hover {
+    text-decoration: underline;
+  }
+  
+  #project_area .box_content li .box_img {
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+  }
   #project_area .box_content li img {
     width: 100%;
     object-fit: cover;
     aspect-ratio: 1 / 1;
-    margin-bottom: 1rem;
-    border-radius: 10px;
+    transition: .3s;
+  }
+  #project_area .box_content li:hover img {
+    transform: scale(1.1);
   }
 
   #project_area .box_content li h3 {
@@ -646,17 +701,34 @@ html {
     display: inline-flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem 1rem 2rem;
     color: #FFF;
     background: #0f4be2;
     border-radius: 50px;
     font-size: 1.2rem;
     cursor: pointer;
   }
-
-  #project_area .btn_more button i {
-    font-size: 1.2rem;
+  
+  #project_area .btn_more a > span {
+    position: relative;
   }
+  #project_area .btn_more a .box_txt {
+    z-index: 1;
+    position: relative;
+    background: #0f4be2;
+  }
+  #project_area .btn_more i {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+  }
+  #project_area .btn_more a:hover i {
+    left: 105%;
+    transition: .5s;
+  }
+
   /* project_area 반응형 */
   @media (max-width: 767px) {
     #project_area {
@@ -668,11 +740,7 @@ html {
     }
     #project_area .box_tab {
       flex-wrap: wrap;
-      font-size: 1.2rem;
       margin-bottom: 2rem;
-    }
-    #project_area .box_tab .cont_tab {
-      padding: .5rem 1rem;
     }
     #project_area .box_content {
       flex-wrap: wrap;
@@ -686,17 +754,28 @@ html {
   }
 
   /* popup */
+  @keyframes motion {
+    0% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 10px;
+    }
+  }
   #popup {
     z-index: 101;
     position: fixed;
     right: 0;
     top: 52%;
+    cursor: pointer;
   }
-
+  
   #popup img {
     width: 100px;
     height: 100px;
-    cursor: pointer;
+  }
+  #popup:hover img {
+    animation: motion .5s linear infinite alternate;
   }
 
   #popup .popup_screen {
@@ -767,8 +846,7 @@ html {
   /* popup 반응형 */
   @media (max-width: 1199px) {
     #popup {
-      top: auto;
-      bottom: 11rem;
+      top: 60%;
     }
   }
   @media (max-width: 767px) {
@@ -830,3 +908,4 @@ html {
     justify-content: flex-end;
   }
 }
+
