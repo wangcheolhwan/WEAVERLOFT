@@ -347,22 +347,22 @@
   <script>
     /* global */
     function clearClass(arr) {
-        arr.forEach((el) => el.classList.remove('active'));
-      }
-  
+      arr.forEach((el) => el.classList.remove('active'));
+    }
+
     function scrollFix() {
-        document.body.style.cssText = `
+      document.body.style.cssText = `
       position: fixed; 
       top: -${window.scrollY}px;
       overflow-y: scroll;
       width: 100%;`;
-      }
+    }
     function scrollFixClear() {
       const scrollY = document.body.style.top;
       document.body.style.cssText = '';
       window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
     }
-  
+
     /* 추천 검색어 */
     (function () {
       const searchEl = document.querySelector('#header .search');
@@ -376,7 +376,7 @@
         }, 150)
       })
     })();
-  
+
     /* 모바일 추천 검색어 */
     (function () {
       const searchEl = document.querySelector('#snb .search');
@@ -390,7 +390,7 @@
         }, 150)
       })
     })();
-  
+
     /* 메인비주얼 슬라이드 */
     (function () {
       // 스와이퍼 설정
@@ -416,37 +416,37 @@
           nextEl: '#main_visual .swiper-button-next'
         },
       });
-  
+
       // 슬라이드 시작 버튼, 멈춤 버튼
       const playBtnEl = document.querySelector('#main_visual .swiper-button-play');
       const stopBtnEl = document.querySelector('#main_visual .swiper-button-pause');
-  
+
       playBtnEl.addEventListener('click', function () {
         mySwiper.autoplay.start();
         playBtnEl.classList.remove('show');
         stopBtnEl.classList.add('show');
       });
-  
+
       stopBtnEl.addEventListener('click', function () {
         mySwiper.autoplay.stop();
         stopBtnEl.classList.remove('show');
         playBtnEl.classList.add('show');
       });
     })();
-  
+
     /* 컨텐츠 탭 */
     (function () {
       const contentTabEls = document.querySelectorAll('.cont_tab');
       const tabEls = [...contentTabEls];
-      
+
       tabEls.forEach((tabEl) => {
         tabEl.addEventListener('click', (event) => {
           clearClass(tabEls);
           event.currentTarget.classList.add('active');
-  
+
           const tabNum = event.currentTarget.dataset.tab;
           const boxContentEls = document.querySelectorAll('.box_content');
-  
+
           boxContentEls.forEach((contentEl) => {
             if (contentEl.dataset.tab === tabNum) {
               contentEl.classList.add('active');
@@ -457,13 +457,13 @@
         })
       })
     })();
-  
+
     /* 컨텐츠 팝업 */
     (function () {
       const openBtn = document.querySelector('#popup .floating_btn');
       const closeBtn = document.querySelector('#popup .btn_close');
       const popupEl = document.querySelector('#popup .popup_screen');
-  
+
       openBtn.addEventListener('click', function () {
         popupEl.classList.add('active');
         scrollFix();
@@ -473,20 +473,20 @@
         scrollFixClear();
       })
     })();
-  
+
     /* snb 팝업 */
     (function () {
       const openBtn = document.querySelector('#header .btn_menu');
       const closeBtn = document.querySelector('#snb .btn_close');
       const popupEl = document.querySelector('#snb');
       const menuEls = document.querySelectorAll('#snb .list_menu > li');
-  
+
       openBtn.addEventListener('click', function () {
         popupEl.classList.add('active');
         scrollFix();
-  
+
         let delay = 0;
-  
+
         menuEls.forEach(menuEl => {
           menuEl.style.transition = `opacity ${delay}s`;
           menuEl.style.opacity = '1';
@@ -496,18 +496,18 @@
       closeBtn.addEventListener('click', function () {
         popupEl.classList.remove('active');
         scrollFixClear();
-  
+
         menuEls.forEach(menuEl => {
           menuEl.style.opacity = '0';
         })
       })
     })();
-  
+
     /* view more 링크 */
     (function () {
       const contentEls = document.querySelectorAll('#project_area .box_content > li');
       const btnMoreEl = document.querySelector('#project_area .btn_more');
-  
+
       [...contentEls].forEach((contentEl) => {
         contentEl.addEventListener('click', (event) => {
           const dataType = contentEl.dataset.type;
@@ -531,4 +531,5 @@
     })();
   </script>
 </body>
+
 </html>
